@@ -1,0 +1,29 @@
+Results for grid search for the linear SVC
+
+scoring='f1_macro', verbose=4)
+>>> grid.grid_scores_
+[mean: 0.54224, std: 0.00634, params: {'kernel': 'linear', 'C': 0.001}, mean: 0.72967, std: 0.00710, params: {'kernel': 'linear', 'C': 0.0048329302385717518}, mean: 0.79210, std: 0.00765, params: {'kernel': 'linear', 'C': 0.023357214690901226}, mean: 0.80117, std: 0.01217, params: {'kernel': 'linear', 'C': 0.11288378916846895}, mean: 0.79629, std: 0.00977, params: {'kernel': 'linear', 'C': 0.54555947811685201}, mean: 0.79511, std: 0.01001, params: {'kernel': 'linear', 'C': 2.6366508987303581}, mean: 0.79487, std: 0.01025, params: {'kernel': 'linear', 'C': 12.742749857031347}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 61.584821106602668}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 297.63514416313194}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 1438.449888287663}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 6951.9279617756056}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 33598.182862837813}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 162377.67391887243}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 784759.97035146225}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 3792690.1907322537}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 18329807.108324375}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 88586679.041008323}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 428133239.8719396}, mean: 0.79475, std: 0.01020, params: {'kernel': 'linear', 'C': 2069138081.1147902}, mean: 0.79484, std: 0.01035, params: {'kernel': 'linear', 'C': 10000000000.0}]
+>>> max(grid.grid_scores_)
+mean: 0.79484, std: 0.01035, params: {'kernel': 'linear', 'C': 10000000000.0}
+>>> grid.best_score_
+0.80117350623865069
+>>> grid.best_params_
+{'kernel': 'linear', 'C': 0.11288378916846895}
+>>> grid/scorer_
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'scorer_' is not defined
+>>> grid.scorer_
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/sklearn/metrics/scorer.py", line 49, in __repr__
+    % (self._score_func.__name__,
+AttributeError: 'functools.partial' object has no attribute '__name__'
+>>> print grid.scorer_
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/local/lib/python2.7/dist-packages/sklearn/metrics/scorer.py", line 49, in __repr__
+    % (self._score_func.__name__,
+AttributeError: 'functools.partial' object has no attribute '__name__'
+>>> grid.best_params_
+{'kernel': 'linear', 'C': 0.11288378916846895}
